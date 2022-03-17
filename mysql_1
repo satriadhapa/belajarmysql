@@ -1,0 +1,23 @@
+CREATE TABLE Data_MHS
+(
+    id         INT          NOT NULL AUTO_INCREMENT,
+    nama_dpn VARCHAR(50) NOT NULL,
+    nama_blk  VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id)
+) ENGINE = InnoDB;
+
+DESCRIBE Data_MHS;
+
+INSERT INTO Data_MHS(nama_dpn, nama_blk)
+VALUES ('Eko', 'Khannedy'),
+       ('Budi', 'Nugraha'),
+       ('Joko', 'Morro');
+
+SELECT * FROM Data_MHS ORDER BY id;
+
+DELETE FROM Data_MHS WHERE id = 3;
+
+INSERT INTO Data_MHS(nama_dpn, nama_blk)
+VALUES ('Rully', 'Hidayat');
+
+SELECT LAST_INSERT_ID();
